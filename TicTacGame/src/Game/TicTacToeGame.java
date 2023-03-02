@@ -5,8 +5,7 @@ public class TicTacToeGame {
     static char[][] ticTacToe = new char[3][3];
     int move = 1;
 
-    public static void ticTacToe() {
-    }
+
 
 
     boolean validarJogada(int linha, int coluna, char sinal){
@@ -51,6 +50,7 @@ public class TicTacToeGame {
         }
         return false;
     }
+
 }
 }
 

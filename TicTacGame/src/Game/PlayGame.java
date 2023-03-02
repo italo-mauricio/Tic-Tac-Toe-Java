@@ -1,6 +1,8 @@
 package Game;
 
+import java.sql.SQLOutput;
 import java.util.Scanner;
+import Game.Screen;
 
 public class PlayGame {
     public static void main(String[] args) {
@@ -8,8 +10,7 @@ public class PlayGame {
 
         TicTacToeGame ticTacToeGame = new TicTacToeGame();
 
-        System.out.println("Jogador 1 = X");
-        System.out.println("Jogador 2 = O");
+        new Screen();
 
         boolean ganhou = false;
         char sinal;
