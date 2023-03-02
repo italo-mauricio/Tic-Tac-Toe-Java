@@ -1,7 +1,7 @@
 package Game;
 
 import java.util.Scanner;
-import Game.PlayerStatus.Player;
+import Game.RegisterPlayer.Player;
 
 public class PlayGame {
     public static void main(String[] args) {

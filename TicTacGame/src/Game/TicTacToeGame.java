@@ -1,9 +1,8 @@
 package Game;
 
 
-import Game.PlayerStatus.Player;
-
-import java.util.Scanner;
+import Game.RegisterPlayer.Player;
+import Game.RegisterPlayer.PlayerStatus;
 
 
 public class TicTacToeGame {
@@ -55,35 +54,14 @@ public class TicTacToeGame {
     }
 
     String registerPlayer1(){
-        Scanner scan = new Scanner(System.in);
-        Player player = new Player();
-
-        System.out.print("Insert your real name: ");
-        player.originalName = scan.nextLine();
-        System.out.print("Insert your Nickname: ");
-        player.nickName = scan.nextLine();
-        System.out.print("Insert your Age: ");
-        player.age = scan.nextInt();
-        System.out.println("Registration successfully completed.");
-
-        // Retorna apenas o valor da propriedade 'nickName'
-        return player.nickName;
+        PlayerStatus.main();
+        return Player.nickName;
     }
     String registerPlayer2(){
-        Scanner scan = new Scanner(System.in);
-        Player player = new Player();
-
-        System.out.print("Insert your real name: ");
-        player.originalName = scan.nextLine();
-        System.out.print("Insert your Nickname: ");
-        player.nickName = scan.nextLine();
-        System.out.print("Insert your Age: ");
-        player.age = scan.nextInt();
-        System.out.println("Registration successfully completed.");
-
-        // Retorna apenas o valor da propriedade 'nickName'
-        return player.nickName;
+        PlayerStatus.main();
+        return Player.nickName;
     }
+
 
 }
 

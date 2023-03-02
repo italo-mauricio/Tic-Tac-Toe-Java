@@ -1,4 +1,4 @@
-package Game.PlayerStatus;
+package Game.RegisterPlayer;
 
 public class Player {
     public static String nickName;
