@@ -57,6 +57,7 @@ public class TicTacToeGame {
     String registerPlayer1(){
         Scanner scan = new Scanner(System.in);
         Player player = new Player();
+
         System.out.print("Insert your real name: ");
         player.originalName = scan.nextLine();
         System.out.print("Insert your Nickname: ");
@@ -64,12 +65,14 @@ public class TicTacToeGame {
         System.out.print("Insert your Age: ");
         player.age = scan.nextInt();
         System.out.println("Registration successfully completed.");
-        return player.toString();
-    }
 
+        // Retorna apenas o valor da propriedade 'nickName'
+        return player.nickName;
+    }
     String registerPlayer2(){
         Scanner scan = new Scanner(System.in);
         Player player = new Player();
+
         System.out.print("Insert your real name: ");
         player.originalName = scan.nextLine();
         System.out.print("Insert your Nickname: ");
@@ -77,7 +80,9 @@ public class TicTacToeGame {
         System.out.print("Insert your Age: ");
         player.age = scan.nextInt();
         System.out.println("Registration successfully completed.");
-        return player.toString();
+
+        // Retorna apenas o valor da propriedade 'nickName'
+        return player.nickName;
     }
 
 }
