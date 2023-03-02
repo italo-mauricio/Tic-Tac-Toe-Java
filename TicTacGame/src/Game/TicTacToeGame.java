@@ -12,7 +12,6 @@ public class TicTacToeGame {
     public static void Screen() {
     }
 
-
     boolean validMove(int line, int colum, char signal){
         if(ticTacToe[line][colum] == 'X' || ticTacToe[line][colum] == 'O'){
             return false;

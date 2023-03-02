@@ -12,55 +12,55 @@ public class PlayGame {
         Player player = new Player();
 
 
-        boolean ganhou = false;
-        char sinal;
-        int linha = 0, coluna = 0;
+        boolean win = false;
+        char signal;
+        int row = 0, column = 0;
 
         String player1 = ticTacToeGame.registerPlayer1();
         String player2 = ticTacToeGame.registerPlayer2();
-        while(!ganhou){
+        while(!win){
             TicTacToeGame.Screen();
             if(ticTacToeGame.playerOneMove()){
-                System.out.println("Vez do jogador: " + player1 +"\nEscolha linha e coluna (1 - 3): ");
-                sinal = 'X';
+                System.out.println("Player's turn: " + player1 +"\nChoose row and column (1-3): ");
+                signal = 'X';
             }else{
-                System.out.println("Vez do jogador: " +  player2 + "\nEscolha linha e coluna (1 - 3): ");
-                sinal = 'O';
+                System.out.println("Vez do jogador: " +  player2 + "\nChoose row and column (1-3)): ");
+                signal = 'O';
             }
 
-            linha = valor("Linha", scan);
-            coluna = valor("Coluna", scan);
-            ticTacToeGame.validMove(linha, coluna, sinal);
+            row = getValue("Row", scan);
+            column = getValue("Colum", scan);
+            ticTacToeGame.validMove(row, column, signal);
             ticTacToeGame.displayBoard();
 
             if(ticTacToeGame.chekWinner('X')){
-                ganhou = true;
+                win = true;
                 System.out.println("Parabéns jogador: " + player1 + " ganhou");
             }else if (ticTacToeGame.chekWinner('O')){
                 System.out.println("Parabéns jogador: " + player2 + " ganhou");
             }else if (ticTacToeGame.move > 9){
-                ganhou = true;
+                win = true;
                 System.out.println("Empate");
             }
         }
     }
 
-    private static void appPlayer() {
-    }
-
-    static int valor(String tipoValor, Scanner scan){
-        int valor = 0;
-        boolean valorValido = false;
-        while(!valorValido){
-            System.out.println("Digite a" + tipoValor + " 1 2 e 3");
-            valor = scan.nextInt();
-            if(valor >= 1 && valor <= 3){
-                valorValido = true;
-            }else{
-                System.out.println("Entrada inválida, tente novamente!");
+    static int getValue(String valueLabel, Scanner scan) {
+        int value = 0;
+        boolean validValue = false;
+        while(!validValue) {
+            System.out.println("Enter " + valueLabel + " (1, 2, or 3):");
+            value = scan.nextInt();
+            if(value >= 1 && value <= 3) {
+                validValue = true;
+            } else {
+                System.out.println("Invalid input, please try again.");
             }
         }
-        valor --;
-        return valor;
+        value--;
+        return value;
+    }
+
+    private static void appPlayer() {
     }
 }
