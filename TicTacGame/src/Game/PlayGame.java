@@ -11,12 +11,15 @@ public class PlayGame {
 
         new Screen();
 
+
         boolean ganhou = false;
         char sinal;
         int linha = 0, coluna = 0;
 
         while(!ganhou){
-            if(ticTacToeGame.vezJogador1()){
+            TicTacToeGame.Screen();
+            if(ticTacToeGame.playerOneMove()){
+
                 System.out.println("Vez do jogador 1. Escolha linha e coluna (1 - 3): ");
                 sinal = 'X';
             }else{
@@ -25,13 +28,13 @@ public class PlayGame {
             }
             linha = valor("Linha", scan);
             coluna = valor("Coluna", scan);
-            ticTacToeGame.validarJogada(linha, coluna, sinal);
-            ticTacToeGame.exibirTabuleiro();
+            ticTacToeGame.validMove(linha, coluna, sinal);
+            ticTacToeGame.displayBoard();
 
-            if(ticTacToeGame.verificarGanhador('X')){
+            if(ticTacToeGame.chekWinner('X')){
                 ganhou = true;
                 System.out.println("Parabéns jogador 1 ganhou");
-            }else if (ticTacToeGame.verificarGanhador('O')){
+            }else if (ticTacToeGame.chekWinner('O')){
                 System.out.println("Parabéns jogador 2 ganhou");
             }else if (ticTacToeGame.move > 9){
                 ganhou = true;

@@ -5,10 +5,11 @@ public class TicTacToeGame {
     static char[][] ticTacToe = new char[3][3];
     int move = 1;
 
+    public static void Screen() {
+    }
 
 
-
-    boolean vaalidMove(int line, int colum, char signal){
+    boolean validMove(int line, int colum, char signal){
         if(ticTacToe[line][colum] == 'X' || ticTacToe[line][colum] == 'O'){
             return false;
         }else {
@@ -17,7 +18,6 @@ public class TicTacToeGame {
             return true;
         }
     }
-
 
     void displayBoard(){
 
@@ -28,7 +28,6 @@ public class TicTacToeGame {
             System.out.println();
         }
     }
-
     boolean chekWinner(char signal) {
         //verificar quem ganhou
         if ((ticTacToe[0][0] == signal && ticTacToe[0][1] == signal && ticTacToe[0][2] == signal) ||    // linha 1
@@ -43,7 +42,6 @@ public class TicTacToeGame {
         }
         return false;
     }
-
     boolean playerOneMove(){
         if (move % 2 == 1){
             return true;
