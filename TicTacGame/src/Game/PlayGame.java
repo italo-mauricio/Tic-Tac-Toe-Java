@@ -1,6 +1,5 @@
 package Game;
 
-import java.sql.SQLOutput;
 import java.util.Scanner;
 import Game.Screen;
 
@@ -17,7 +16,7 @@ public class PlayGame {
         int linha = 0, coluna = 0;
 
         while(!ganhou){
-            if(jogoDaVelha.vezJogador1()){
+            if(ticTacToeGame.vezJogador1()){
                 System.out.println("Vez do jogador 1. Escolha linha e coluna (1 - 3): ");
                 sinal = 'X';
             }else{
@@ -26,15 +25,15 @@ public class PlayGame {
             }
             linha = valor("Linha", scan);
             coluna = valor("Coluna", scan);
-            jogoDaVelha.validarJogada(linha, coluna, sinal);
-            jogoDaVelha.exibirTabuleiro();
+            ticTacToeGame.validarJogada(linha, coluna, sinal);
+            ticTacToeGame.exibirTabuleiro();
 
-            if(jogoDaVelha.verificarGanhador('X')){
+            if(ticTacToeGame.verificarGanhador('X')){
                 ganhou = true;
                 System.out.println("Parabéns jogador 1 ganhou");
-            }else if (jogoDaVelha.verificarGanhador('O')){
+            }else if (ticTacToeGame.verificarGanhador('O')){
                 System.out.println("Parabéns jogador 2 ganhou");
-            }else if (jogoDaVelha.jogada > 9){
+            }else if (ticTacToeGame.move > 9){
                 ganhou = true;
                 System.out.println("Empate");
             }

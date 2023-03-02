@@ -8,18 +8,18 @@ public class TicTacToeGame {
 
 
 
-    boolean validarJogada(int linha, int coluna, char sinal){
-        if(ticTacToe[linha][coluna] == 'X' || ticTacToe[linha][coluna] == 'O'){
+    boolean vaalidMove(int line, int colum, char signal){
+        if(ticTacToe[line][colum] == 'X' || ticTacToe[line][colum] == 'O'){
             return false;
         }else {
-            ticTacToe[linha][coluna] = sinal;
+            ticTacToe[line][colum] = signal;
             move++;
             return true;
         }
     }
 
 
-    void exibirTabuleiro(){
+    void displayBoard(){
 
         for (int i = 0; i < ticTacToe.length; i++){
             for (int j = 0; j < ticTacToe[i].length; j++){
@@ -29,7 +29,7 @@ public class TicTacToeGame {
         }
     }
 
-    boolean verificarGanhador(char signal) {
+    boolean chekWinner(char signal) {
         //verificar quem ganhou
         if ((ticTacToe[0][0] == signal && ticTacToe[0][1] == signal && ticTacToe[0][2] == signal) ||    // linha 1
                 (ticTacToe[1][0] == signal && ticTacToe[1][1] == signal && ticTacToe[1][2] == signal) ||  // linha 2
@@ -44,7 +44,7 @@ public class TicTacToeGame {
         return false;
     }
 
-    boolean vezJogador1(){
+    boolean playerOneMove(){
         if (move % 2 == 1){
             return true;
         }
@@ -52,7 +52,7 @@ public class TicTacToeGame {
     }
 
 }
-}
+
 
 
 
