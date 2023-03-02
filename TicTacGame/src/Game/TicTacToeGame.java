@@ -13,7 +13,7 @@ public class TicTacToeGame {
     }
 
     boolean validMove(int line, int colum, char signal){
-        if(ticTacToe[line][colum] == 'X' || ticTacToe[line][colum] == 'O'){
+        if(ticTacToe[line][colum] == 'X' || ticTacToe[line][colum] == 'Y'){
             return false;
         }else {
             ticTacToe[line][colum] = signal;

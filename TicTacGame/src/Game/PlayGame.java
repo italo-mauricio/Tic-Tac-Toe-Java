@@ -24,8 +24,8 @@ public class PlayGame {
                 System.out.println("Player's turn: " + player1 +"\nChoose row and column (1-3): ");
                 signal = 'X';
             }else{
-                System.out.println("Vez do jogador: " +  player2 + "\nChoose row and column (1-3)): ");
-                signal = 'O';
+                System.out.println("Player's turn: " +  player2 + "\nChoose row and column (1-3)): ");
+                signal = 'Y';
             }
 
             row = getValue("Row", scan);
@@ -35,12 +35,12 @@ public class PlayGame {
 
             if(ticTacToeGame.chekWinner('X')){
                 win = true;
-                System.out.println("Parabéns jogador: " + player1 + " ganhou");
-            }else if (ticTacToeGame.chekWinner('O')){
-                System.out.println("Parabéns jogador: " + player2 + " ganhou");
+                System.out.println("Congratulations Player: " + player1 + " you are the WINNER!!!");
+            }else if (ticTacToeGame.chekWinner('Y')){
+                System.out.println("Congratulations Player: " + player2 + " you are the WINNER!!!");
             }else if (ticTacToeGame.move > 9){
                 win = true;
-                System.out.println("Empate");
+                System.out.println("Draw!");
             }
         }
     }
