@@ -2,35 +2,32 @@ package Game;
 
 import java.util.Scanner;
 import Game.PlayerStatus.Player;
-import Game.PlayerStatus.AppPlayer;
 
 public class PlayGame {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
 
         TicTacToeGame ticTacToeGame = new TicTacToeGame();
-
         new Screen();
-        new AppPlayer();
         Player player = new Player();
-        AppPlayer appPlayer = new AppPlayer();
 
 
         boolean ganhou = false;
         char sinal;
         int linha = 0, coluna = 0;
 
+        String player1 = ticTacToeGame.registerPlayer1();
+        String player2 = ticTacToeGame.registerPlayer2();
         while(!ganhou){
             TicTacToeGame.Screen();
-            AppPlayer.main();
             if(ticTacToeGame.playerOneMove()){
-
-                System.out.println("Vez do jogador 1. Escolha linha e coluna (1 - 3): ");
+                System.out.println("Vez do jogador: " + player1 +"\nEscolha linha e coluna (1 - 3): ");
                 sinal = 'X';
             }else{
-                System.out.println("Vez do jogador 2. Escolha linha e coluna (1 - 3): ");
+                System.out.println("Vez do jogador: " +  player2 + "\nEscolha linha e coluna (1 - 3): ");
                 sinal = 'O';
             }
+
             linha = valor("Linha", scan);
             coluna = valor("Coluna", scan);
             ticTacToeGame.validMove(linha, coluna, sinal);
@@ -38,9 +35,9 @@ public class PlayGame {
 
             if(ticTacToeGame.chekWinner('X')){
                 ganhou = true;
-                System.out.println("Parabéns jogador 1 ganhou");
+                System.out.println("Parabéns jogador: " + player1 + " ganhou");
             }else if (ticTacToeGame.chekWinner('O')){
-                System.out.println("Parabéns jogador 2 ganhou");
+                System.out.println("Parabéns jogador: " + player2 + " ganhou");
             }else if (ticTacToeGame.move > 9){
                 ganhou = true;
                 System.out.println("Empate");

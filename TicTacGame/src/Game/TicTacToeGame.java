@@ -1,6 +1,11 @@
 package Game;
 
 
+import Game.PlayerStatus.Player;
+
+import java.util.Scanner;
+
+
 public class TicTacToeGame {
     static char[][] ticTacToe = new char[3][3];
     int move = 1;
@@ -47,6 +52,32 @@ public class TicTacToeGame {
             return true;
         }
         return false;
+    }
+
+    String registerPlayer1(){
+        Scanner scan = new Scanner(System.in);
+        Player player = new Player();
+        System.out.print("Insert your real name: ");
+        player.originalName = scan.nextLine();
+        System.out.print("Insert your Nickname: ");
+        player.nickName = scan.nextLine();
+        System.out.print("Insert your Age: ");
+        player.age = scan.nextInt();
+        System.out.println("Registration successfully completed.");
+        return player.toString();
+    }
+
+    String registerPlayer2(){
+        Scanner scan = new Scanner(System.in);
+        Player player = new Player();
+        System.out.print("Insert your real name: ");
+        player.originalName = scan.nextLine();
+        System.out.print("Insert your Nickname: ");
+        player.nickName = scan.nextLine();
+        System.out.print("Insert your Age: ");
+        player.age = scan.nextInt();
+        System.out.println("Registration successfully completed.");
+        return player.toString();
     }
 
 }
