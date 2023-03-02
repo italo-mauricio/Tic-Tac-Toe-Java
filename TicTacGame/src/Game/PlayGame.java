@@ -1,7 +1,8 @@
 package Game;
 
 import java.util.Scanner;
-import Game.Screen;
+import Game.PlayerStatus.Player;
+import Game.PlayerStatus.AppPlayer;
 
 public class PlayGame {
     public static void main(String[] args) {
@@ -10,6 +11,9 @@ public class PlayGame {
         TicTacToeGame ticTacToeGame = new TicTacToeGame();
 
         new Screen();
+        new AppPlayer();
+        Player player = new Player();
+        AppPlayer appPlayer = new AppPlayer();
 
 
         boolean ganhou = false;
@@ -18,6 +22,7 @@ public class PlayGame {
 
         while(!ganhou){
             TicTacToeGame.Screen();
+            AppPlayer.main();
             if(ticTacToeGame.playerOneMove()){
 
                 System.out.println("Vez do jogador 1. Escolha linha e coluna (1 - 3): ");
@@ -42,6 +47,10 @@ public class PlayGame {
             }
         }
     }
+
+    private static void appPlayer() {
+    }
+
     static int valor(String tipoValor, Scanner scan){
         int valor = 0;
         boolean valorValido = false;
