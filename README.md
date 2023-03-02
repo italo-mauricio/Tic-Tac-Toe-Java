@@ -3,7 +3,7 @@
   <head>
   </head>
   <body>
-    <h1>Tic Tac Toe in Java</h1>
+    <h1 align="center">Tic Tac Toe in Java</h1>
     <p>This project is a Tic Tac Toe game in Java, where two players can play. Tic Tac Toe is a popular and simple game that is played on a 3x3 board. The objective is to get three of the same symbols in a row, column, or diagonal.</p>
     <p>This project was developed in Java for educational purposes and to demonstrate the implementation of a simple game in Java. It uses object-oriented programming concepts, such as classes and methods, to implement the game logic.</p>
     <h2>System requirements</h2>
@@ -17,7 +17,7 @@
       <li>Clone this repository on your computer using the command below:</li>
     </ol>
     <pre>
-      git clone https://github.com/your-username/repository-name.git
+      git clone https://github.com/your-username/Tic-Tac-Toe-Java.git
     </pre>
     <ol start="2">
       <li>Open the IDE of your choice and import the project.</li>
