@@ -48,5 +48,12 @@
     <p>If you want to contribute to this project, feel free to send a pull request with your changes. Before submitting, make sure your files are formatted according to the project guidelines and that you have tested your changes. We appreciate your contribution!</p>
     <h2>License</h2>
     <p>This project is licensed under the MIT License. See the LICENSE file for more details.</p>
+
+## By
+<p align="center">
+  <br />
+        Italo-Mauricio
+  <br />
+</p> 
   </body>
 </html>
