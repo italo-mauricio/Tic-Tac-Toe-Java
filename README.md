@@ -7,7 +7,14 @@
     <p>This project is a Tic Tac Toe game in Java, where two players can play. Tic Tac Toe is a popular and simple game that is played on a 3x3 board. The objective is to get three of the same symbols in a row, column, or diagonal.</p>
     <p>This project was developed in Java for educational purposes and to demonstrate the implementation of a simple game in Java. It uses object-oriented programming concepts, such as classes and methods, to implement the game logic.</p>
     <h2>Developer Status</h2>
-    <p>Name: Italo Mauricio</p>
+    <p> 
+    <ul><li>Name: Italo Mauricio</li>
+        <li>Age: 24 years old</li>
+        <li>Skill: Back-end Developer</li>
+        <li>College: Federal University of Rio Grande do Norte - 3rd semester.</li>
+        <li>Major: Information Systems</li>
+</ul>
+    </p>
     <h2>System requirements</h2>
     <p>To run this project, you will need the following software installed on your computer:</p>
     <ul>
