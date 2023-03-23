@@ -60,8 +60,6 @@ public class TicTacToeGame {
         PlayerStatus.main();
         return Player.nickName;
     }
-
-
 }
 
 
