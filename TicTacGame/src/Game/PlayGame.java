@@ -44,7 +44,6 @@ public class PlayGame {
             }
         }
     }
-
     static int getValue(String valueLabel, Scanner scan) {
         int value = 0;
         boolean validValue = false;
@@ -60,7 +59,6 @@ public class PlayGame {
         value--;
         return value;
     }
-
     private static void appPlayer() {
     }
 }
